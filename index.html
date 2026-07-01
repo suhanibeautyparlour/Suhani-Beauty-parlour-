@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhani Beauty Parlour & Training Center | Rajiv Nagar, Patna</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Exact Theme Colors from SBP Logo.png */
+        :root {
+            --bright-pink: #ec1c84;
+            --plum-purple: #903c80;
+            --gradient-pink: linear-gradient(135deg, #ec1c84 0%, #903c80 100%);
+            --light-bg: #fff5f8;
+            --dark-text: #2f2f2f;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #fffcfd;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-img {
+            height: 70px; /* Custom size for SBP Logo.png */
+            width: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--bright-pink);
+        }
+
+        /* Hero Section with Custom Gradient */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 45px;
+            color: var(--plum-purple);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--bright-pink);
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            background: var(--gradient-pink);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(236, 28, 132, 0.3);
+        }
+
+        .btn-secondary {
+            background: #4285F4; /* Google Blue */
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Services & Training Section */
+        .services {
+            padding: 70px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: var(--plum-purple);
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(144, 60, 128, 0.05);
+            border: 1px solid rgba(236, 28, 132, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--bright-pink);
+        }
+
+        .service-card h3 {
+            color: var(--bright-pink);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-bg);
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+        }
+
+        .contact-info strong {
+            color: var(--plum-purple);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gradient-pink);
+            color: var(--white);
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Automatically loads your attached logo file -->
+            <img src="SBP Logo.png" alt="Suhani Beauty Parlour Logo" class="logo-img">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services & Training</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Suhani Beauty Parlour & Training Center</h1>
+        <p>BEAUTY PARLOUR & TRAINING CENTER</p>
+        <div class="cta-buttons">
+            <a href="tel:7033719982" class="btn">Call Now: 7033719982</a>
+            <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn btn-secondary">Find Us on Google Maps</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Expert Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Bridal & Party Makeup</h3>
+                <p>Special occasions ke liye professional makeup aur flawless glow looks.</p>
+            </div>
+            <div class="service-card">
+                <h3>Hair Treatment & Styling</h3>
+                <p>Hair Smoothening, Keratin, Spa, Cutting aur Highlighting ki best facilities.</p>
+            </div>
+            <div class="service-card">
+                <h3>Skin Care & Facials</h3>
+                <p>Advance Facials, D-Tan, Cleanup aur Skin Whitening treatments.</p>
+            </div>
+            <div class="service-card">
+                <h3>Beautician Training Center</h3>
+                <p>Aapke bright career ke liye professional beauty aur makeup certificate courses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Visit Our Parlour</h2>
+        <div class="contact-info">
+            <p><strong>Address:</strong> Rajiv Nagar, Road No. 10, Patna, Bihar</p>
+            <p><strong>Mobile:</strong> <a href="tel:7033719982" style="color: var(--bright-pink); text-decoration: none; font-weight: bold;">+91 7033719982</a></p>
+            <p style="margin-top: 30px;">
+                <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn">Write a Google Review</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Suhani Beauty Parlour & Training Center | Rajiv Nagar, Patna</p>
+    </footer>
+
+</body>
+</html>
