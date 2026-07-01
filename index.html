@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suhani Beauty Parlour & Training Center | Rajiv Nagar, Patna</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Exact Theme Colors from SBP Logo.png */
+        /* SBP Logo Theme Colors */
         :root {
             --bright-pink: #ec1c84;
             --plum-purple: #903c80;
@@ -15,6 +15,7 @@
             --light-bg: #fff5f8;
             --dark-text: #2f2f2f;
             --white: #ffffff;
+            --success-green: #25D366; /* WhatsApp Green */
         }
 
         * {
@@ -49,7 +50,7 @@
         }
 
         .logo-img {
-            height: 70px; /* Custom size for SBP Logo.png */
+            height: 70px;
             width: auto;
         }
 
@@ -73,10 +74,10 @@
             color: var(--bright-pink);
         }
 
-        /* Hero Section with Custom Gradient */
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
-            height: 75vh;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -116,10 +117,18 @@
             font-weight: bold;
             transition: opacity 0.3s;
             box-shadow: 0 4px 15px rgba(236, 28, 132, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-whatsapp {
+            background: var(--success-green);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
         .btn-secondary {
-            background: #4285F4; /* Google Blue */
+            background: #4285F4;
             box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
         }
 
@@ -127,7 +136,7 @@
             opacity: 0.9;
         }
 
-        /* Services & Training Section */
+        /* Services & Booking Section */
         .services {
             padding: 70px 5%;
             max-width: 1200px;
@@ -139,22 +148,31 @@
             font-family: 'Playfair Display', serif;
             font-size: 36px;
             color: var(--plum-purple);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: #666;
             margin-bottom: 40px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .service-card {
             background-color: var(--white);
-            padding: 35px 25px;
+            padding: 30px 20px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(144, 60, 128, 0.05);
             border: 1px solid rgba(236, 28, 132, 0.1);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-card:hover {
@@ -163,14 +181,66 @@
         }
 
         .service-card h3 {
-            color: var(--bright-pink);
-            margin-bottom: 15px;
+            color: var(--plum-purple);
+            margin-bottom: 10px;
             font-size: 22px;
+        }
+
+        .price-tag {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--bright-pink);
+            margin: 15px 0;
+        }
+
+        .price-tag span {
+            font-size: 14px;
+            color: #777;
+            font-weight: 400;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Payment Info Section */
+        .payment-info {
+            background-color: var(--light-bg);
+            padding: 50px 5%;
+            text-align: center;
+            border-top: 2px dashed rgba(236, 28, 132, 0.2);
+            border-bottom: 2px dashed rgba(236, 28, 132, 0.2);
+        }
+
+        .payment-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .payment-container h3 {
+            color: var(--plum-purple);
+            margin-bottom: 15px;
+        }
+
+        .payment-steps {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+
+        .payment-steps li {
+            margin-bottom: 10px;
+            font-size: 15px;
         }
 
         /* Contact Section */
         .contact {
-            background-color: var(--light-bg);
             padding: 70px 5%;
             text-align: center;
         }
@@ -215,11 +285,11 @@
     <!-- Header / Navbar -->
     <header>
         <nav class="navbar">
-            <!-- Automatically loads your attached logo file -->
             <img src="SBP Logo.png" alt="Suhani Beauty Parlour Logo" class="logo-img">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services & Training</a></li>
+                <li><a href="#booking">Book Services</a></li>
+                <li><a href="#payment">Payment Info</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -228,33 +298,82 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <h1>Suhani Beauty Parlour & Training Center</h1>
-        <p>BEAUTY PARLOUR & TRAINING CENTER</p>
+        <p>Aapki Khoobsurati, Humari Zimmedari</p>
         <div class="cta-buttons">
-            <a href="tel:7033719982" class="btn">Call Now: 7033719982</a>
+            <a href="https://wa.me/917033719982?text=Hi%20Suhani%20Beauty%20Parlour,%20mujhe%20booking%20karni%20hai." target="_blank" class="btn btn-whatsapp">Book via WhatsApp</a>
             <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn btn-secondary">Find Us on Google Maps</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2 class="section-title">Our Expert Services</h2>
+    <!-- Services & Booking Section -->
+    <section id="booking" class="services">
+        <h2 class="section-title">Bridal Packages & Services Booking</h2>
+        <p class="section-subtitle">Apna slot book karne ke liye neeche diye gaye "Book Now" par click karein</p>
+        
         <div class="services-grid">
+            <!-- Service 1 -->
             <div class="service-card">
-                <h3>Bridal & Party Makeup</h3>
-                <p>Special occasions ke liye professional makeup aur flawless glow looks.</p>
+                <div>
+                    <h3>HD Bridal Makeup</h3>
+                    <p>High Definition professional makeup jo aapko camera aur lights me flawless look dega. Includes hair styling & draping.</p>
+                </div>
+                <div>
+                    <div class="price-tag">₹6,999/- <br><span>(₹1,000 Advance Booking)</span></div>
+                    <a href="https://wa.me/917033719982?text=Hi,%20mujhe%20*HD%20Bridal%20Makeup*%20book%20karna%20hai.%20Please%20details%20bhein." target="_blank" class="btn btn-whatsapp">Book Now</a>
+                </div>
             </div>
+
+            <!-- Service 2 -->
             <div class="service-card">
-                <h3>Hair Treatment & Styling</h3>
-                <p>Hair Smoothening, Keratin, Spa, Cutting aur Highlighting ki best facilities.</p>
+                <div>
+                    <h3>Airbrush Bridal Makeup</h3>
+                    <p>Premium long-lasting, water-proof airbrush makeup look. Celeb-style glow for your special day.</p>
+                </div>
+                <div>
+                    <div class="price-tag">₹9,999/- <br><span>(₹2,000 Advance Booking)</span></div>
+                    <a href="https://wa.me/917033719982?text=Hi,%20mujhe%20*Airbrush%20Bridal%20Makeup*%20book%20karna%20hai.%20Please%20details%20bhein." target="_blank" class="btn btn-whatsapp">Book Now</a>
+                </div>
             </div>
+
+            <!-- Service 3 -->
             <div class="service-card">
-                <h3>Skin Care & Facials</h3>
-                <p>Advance Facials, D-Tan, Cleanup aur Skin Whitening treatments.</p>
+                <div>
+                    <h3>Pre-Bridal Glow Package</h3>
+                    <p>Full body waxing, facial, threading, manicure, pedicure, aur hair spa aapki shadi se pehle wale glow ke liye.</p>
+                </div>
+                <div>
+                    <div class="price-tag">₹3,499/- <br><span>(₹500 Advance Booking)</span></div>
+                    <a href="https://wa.me/917033719982?text=Hi,%20mujhe%20*Pre-Bridal%20Glow%20Package*%20book%20karna%20hai.%20Please%20details%20bhein." target="_blank" class="btn btn-whatsapp">Book Now</a>
+                </div>
             </div>
+
+            <!-- Service 4 -->
             <div class="service-card">
-                <h3>Beautician Training Center</h3>
-                <p>Aapke bright career ke liye professional beauty aur makeup certificate courses.</p>
+                <div>
+                    <h3>Party / Engagement Makeup</h3>
+                    <p>Sagan, Mehndi, ya kisi bhi party ke liye elegant aur subtle makeup look.</p>
+                </div>
+                <div>
+                    <div class="price-tag">₹2,499/- <br><span>(₹500 Advance Booking)</span></div>
+                    <a href="https://wa.me/917033719982?text=Hi,%20mujhe%20*Party/Engagement%20Makeup*%20book%20karna%20hai.%20Please%20details%20bhein." target="_blank" class="btn btn-whatsapp">Book Now</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Payment Info Section -->
+    <section id="payment" class="payment-info">
+        <div class="payment-container">
+            <h3>How Booking & Payment Works?</h3>
+            <p>Suhani Beauty Parlour me online booking karna bilkul surakshit aur aasan hai:</p>
+            <ul class="payment-steps">
+                <li>1. Apni pasand ki service ke neeche <strong>"Book Now"</strong> par click karein.</li>
+                <li>2. Aap direct hamare WhatsApp par connect ho jayenge.</li>
+                <li>3. Hum aapko WhatsApp par PhonePe/GooglePay number ya UPI QR code share karenge.</li>
+                <li>4. Advance payment karne ke baad aapka shaadi/event ka slot fix (confirm) ho jayega.</li>
+                <li>5. Baaki bacha hua payment aap parlour me service lene ke baad de sakti hain.</li>
+            </ul>
+            <p style="font-weight: bold; color: var(--bright-pink); margin-top: 15px;">Official Booking Number: 7033719982</p>
         </div>
     </section>
 
@@ -263,9 +382,9 @@
         <h2 class="section-title">Visit Our Parlour</h2>
         <div class="contact-info">
             <p><strong>Address:</strong> Rajiv Nagar, Road No. 10, Patna, Bihar</p>
-            <p><strong>Mobile:</strong> <a href="tel:7033719982" style="color: var(--bright-pink); text-decoration: none; font-weight: bold;">+91 7033719982</a></p>
+            <p><strong>Call/WhatsApp:</strong> <a href="tel:7033719982" style="color: var(--bright-pink); text-decoration: none; font-weight: bold;">+91 7033719982</a></p>
             <p style="margin-top: 30px;">
-                <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn">Write a Google Review</a>
+                <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn btn-secondary">Review Us on Google</a>
             </p>
         </div>
     </section>
