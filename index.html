@@ -22,7 +22,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
         }
 
         body {
@@ -205,7 +205,7 @@
             margin-bottom: 20px;
         }
 
-        /* Gallery Section */
+        /* Gallery Section Linked with Google Business Photos */
         .gallery-section {
             padding: 70px 5%;
             background-color: var(--white);
@@ -227,6 +227,9 @@
             height: 250px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             border: 2px solid rgba(236, 28, 132, 0.05);
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
         }
 
         .gallery-item img {
@@ -245,11 +248,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(144, 60, 128, 0.8));
+            background: linear-gradient(transparent, rgba(144, 60, 128, 0.85));
             padding: 15px;
             color: var(--white);
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             text-align: center;
         }
 
@@ -406,30 +409,32 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section (Linked to Google Update Page) -->
     <section id="gallery" class="gallery-section">
         <h2 class="section-title">हमारा वर्क गैलरी</h2>
-        <p class="section-subtitle">हमारे लेटेस्ट हेयर स्टाइल्स, ब्राइडल ट्रांसफॉर्मेशन और ट्रेनिंग की लाइव तस्वीरें देखने के लिए नीचे बटन पर क्लिक करें</p>
+        <p class="section-subtitle">हमारे लेटेस्ट काम, ब्राइडल लुक्स और ट्रेनिंग सेशन्स की लाइव तस्वीरें देखने के लिए नीचे बटन या किसी भी फोटो पर क्लिक करें</p>
         
-        <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn btn-secondary" style="margin-bottom: 20px;">गूगल पर हमारी लेटेस्ट तस्वीरें देखें</a>
+        <!-- Main Link Button to Specific Google Updates Page -->
+        <a href="https://share.google/pdmUPcBUmxxaim1u8" target="_blank" class="btn btn-secondary" style="margin-bottom: 35px; box-shadow: 0 4px 15px rgba(236, 28, 132, 0.2);">गूगल पर हमारे लाइव लेटेस्ट अपडेट्स देखें</a>
         
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <!-- Every item now directly links to your exact updates link -->
+            <a href="https://share.google/pdmUPcBUmxxaim1u8" target="_blank" class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bridal Transformation">
-                <div class="gallery-overlay">ब्राइडल मेकअप</div>
-            </div>
-            <div class="gallery-item">
+                <div class="gallery-overlay">ब्राइडल मेकअप (लाइव तस्वीरें देखें)</div>
+            </a>
+            <a href="https://share.google/pdmUPcBUmxxaim1u8" target="_blank" class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hair Styling">
-                <div class="gallery-overlay">हेयर ट्रीटमेंट और स्टाइलिंग</div>
-            </div>
-            <div class="gallery-item">
+                <div class="gallery-overlay">हेयर स्टाइलिंग (लाइव तस्वीरें देखें)</div>
+            </a>
+            <a href="https://share.google/pdmUPcBUmxxaim1u8" target="_blank" class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Skin Care">
-                <div class="gallery-overlay">स्किन केयर और फेशियल</div>
-            </div>
-            <div class="gallery-item">
+                <div class="gallery-overlay">स्किन केयर और फेशियल (लाइव देखें)</div>
+            </a>
+            <a href="https://share.google/pdmUPcBUmxxaim1u8" target="_blank" class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Students Training">
-                <div class="gallery-overlay">ब्यूटीशियन ट्रेनिंग क्लासेस</div>
-            </div>
+                <div class="gallery-overlay">ट्रेनिंग क्लासेज (लाइव तस्वीरें देखें)</div>
+            </a>
         </div>
     </section>
 
@@ -441,7 +446,7 @@
             <ul class="payment-steps">
                 <li>1. अपनी पसंद की सर्विस के नीचे दिए गए <strong>"Book Now"</strong> बटन पर क्लिक करें।</li>
                 <li>2. आप सीधे हमारे ऑफिशियल WhatsApp पर जुड़ जाएंगे।</li>
-                <li>3. हम आपको WhatsApp पर PhonePe/GooglePay नंबर या UPI QR कोड शेयर करेंगे।</li>
+                <li>3. हम आपको WhatsApp पर PhonePe/GooglePay नंबर या UPI QR code शेयर करेंगे।</li>
                 <li>4. एडवांस पेमेंट करने के बाद आपकी शादी/इवेंट का स्लॉट पक्का (Confirm) हो जाएगा।</li>
                 <li>5. बाकी का पेमेंट आप पार्लर में सर्विस लेने के बाद दे सकती हैं।</li>
             </ul>
