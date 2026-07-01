@@ -364,6 +364,53 @@
             opacity: 0.8;
         }
 
+        /* Floating WhatsApp Button (Right Side) */
+        .whatsapp-floating {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--success-green);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-floating:hover {
+            transform: scale(1.1);
+        }
+
+        /* Tooltip text on hover */
+        .whatsapp-floating::before {
+            content: "Book Appointment";
+            position: absolute;
+            right: 75px;
+            background-color: #333;
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .whatsapp-floating:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
         /* Footer */
         footer {
             background: var(--gradient-pink);
@@ -384,6 +431,16 @@
             }
             .nav-links li {
                 margin: 0 10px;
+            }
+            .whatsapp-floating {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+            }
+            .whatsapp-floating::before {
+                display: none; /* Mobile par hidden text */
             }
         }
     </style>
@@ -413,7 +470,7 @@
             <a href="https://share.google/rW24ZlwRZkdGZw9hM" target="_blank" class="btn btn-secondary"><i class="fas fa-map-marker-alt"></i> गूगल मैप्स पर खोजें</a>
         </div>
         
-        <!-- Social Media Icons (Updated Facebook Link) -->
+        <!-- Social Media Icons -->
         <div class="social-row">
             <a href="https://www.facebook.com/share/1BJnMNrnAQ/" target="_blank" class="social-icon-btn fb" title="Facebook Page"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/suhanibparlour/" target="_blank" class="social-icon-btn ig" title="Instagram Profile"><i class="fab fa-instagram"></i></a>
@@ -441,7 +498,7 @@
             <div class="service-card">
                 <div>
                     <h3>Airbrush Bridal Makeup</h3>
-                    <p>प्रीमियम延-लास्टिंग और वाटर-प्रूफ एयरब्रश मेकअप लुक। आपके खास दिन के लिए सेलिब्रिटी जैसा ग्लो।</p>
+                    <p>प्रीमियम लॉन्ग-लास्टिंग और वाटर-प्रूफ एयरब्रश मेकअप लुक। आपके खास दिन के लिए सेलिब्रिटी जैसा ग्लो।</p>
                 </div>
                 <div>
                     <div class="price-tag">₹9,999/- <br><span>(₹2,000 एडवांस बुकिंग)</span></div>
@@ -463,7 +520,7 @@
             <div class="service-card">
                 <div>
                     <h3>Party / Engagement Makeup</h3>
-                    <p>सगाई, mehndi, संगीत या किसी भी खास पार्टी के लिए एलिगेंट और खूबसूरत मेकअप लुक।</p>
+                    <p>सगाई, mehndi, संगीत या किसी भी खास party के लिए एलिगेंट और खूबसूरत मेकअप लुक।</p>
                 </div>
                 <div>
                     <div class="price-tag">₹2,499/- <br><span>(₹500 एडवांस बुकिंग)</span></div>
@@ -528,10 +585,14 @@
         </div>
     </section>
 
+    <!-- Floating WhatsApp Button (Fixed on Right Side) -->
+    <a href="https://wa.me/917033719982?text=नमस्ते%20सुहानी%20ब्यूटी%20पार्लर,%20मुझे%20अपॉइंटमेंट%20बुक%20करना%20है।" class="whatsapp-floating" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Suhani Beauty Parlour & Training Center | Rajiv Nagar, Patna</p>
-        <!-- Updated Facebook Link in Footer too -->
         <div class="footer-socials">
             <a href="https://www.facebook.com/share/1BJnMNrnAQ/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/suhanibparlour/" target="_blank"><i class="fab fa-instagram"></i></a>
